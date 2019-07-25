@@ -4,17 +4,16 @@ const selection = document.querySelector(".select1");
 
 const comoEstoy = function() {
   const mood = selection.value;
-  console.log(`Estoy ${mood}`);
+  return mood;
 };
 
 function yourMood() {
   // me gustaría utilizar la constante anterior comoEstoy aquí en vez de selection.value
-  if (selection.value === "happy") {
+  if (comoEstoy() === "happy") {
     title.innerHTML = ":)";
   } else {
     title.innerHTML = ":(";
   }
 }
 
-selection.addEventListener("change", comoEstoy);
 button.addEventListener("click", yourMood);
